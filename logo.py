@@ -1,5 +1,5 @@
 # ICS3U
-# Assignment 2: Logo
+# Assignment 2: Logo, Mercedes Benz Logo
 # <Cody Emery>
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
