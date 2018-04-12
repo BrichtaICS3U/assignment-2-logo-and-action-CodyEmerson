@@ -1,6 +1,6 @@
 # ICS3U
 # Assignment 2: Action
-# <your name>
+# <Cody Emery>
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 

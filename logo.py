@@ -1,6 +1,6 @@
 # ICS3U
 # Assignment 2: Logo
-# <your name>
+# <Cody Emery>
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
@@ -10,10 +10,9 @@ pygame.init()
 
 # Define some colours
 # Colours are defined using RGB values
-BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
-RED = (255, 0, 0)
+SILVER = (189, 191, 193)
+DARKSILVER = (132, 132, 132)
 
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
@@ -47,9 +46,17 @@ while carryOn:
     screen.fill(WHITE)
 
     # Queue different shapes and lines to be drawn
-    # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
-    # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
+    #Top of the triangle--------------------------------------------------------------------------------------------------------------
+    pygame.draw.polygon(screen, SILVER, [[200, 40], [200, 200], [180, 185]])
+    pygame.draw.polygon(screen, DARKSILVER, [[200, 40], [200, 200], [220, 185]])
+    #Bottom left of the triangle--------------------------------------------------------------------------------------------------
+    pygame.draw.polygon(screen, SILVER, [[75, 260], [200, 200], [180, 185]])
+    pygame.draw.polygon(screen, DARKSILVER, [[75, 260], [200, 200], [200, 225]])
+    #Bottom right of the triangle-----------------------------------------------------------------------------------------------
+    pygame.draw.polygon(screen, SILVER, [[325, 260], [200, 200], [220, 185]])
+    pygame.draw.polygon(screen, DARKSILVER, [[325, 260], [200, 200], [200, 225]])
+    #Circle of the logo---------------------------------------------------------------------------------------------------------------
+    pygame.draw.ellipse(screen, SILVER, [50, 40, 300, 300], 10)
 
     # Update the screen with queued shapes
     pygame.display.flip()
