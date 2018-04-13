@@ -10,6 +10,10 @@ import pygame, random
 from snow import Snow
 pygame.init()
 
+pygame.mixer.pre_init(frequency=44100, size=-16, channels=2, buffer=4096)
+pygame.mixer.music.load('Sounds/Ronettes - Sleigh Bells (PhatCap! Trap Remix).mp3')
+pygame.mixer.music.play(-1) #-1 means loops for ever, 0 means play just once)
+
 # Define some colours
 # Colours are defined using RGB values
 BLACK = (0, 0, 0)
@@ -308,7 +312,6 @@ while carryOn:
     # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
     # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
     # pygame.draw.rect(screen, BLACK, [20, 20, 250, 100], 2)
-    all_sprites_list.draw(screen)
     # Update the screen with queued shapes
     pygame.display.flip()
 
