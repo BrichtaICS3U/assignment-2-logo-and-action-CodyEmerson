@@ -292,6 +292,9 @@ while carryOn:
     for event in pygame.event.get(): # Player did something
         if event.type == pygame.QUIT: # Player clicked close button
             carryOn = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                carryOn = False
 
     # --- Game logic goes here
     for snow in all_falling_snowFlakes:
